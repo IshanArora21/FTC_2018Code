@@ -382,17 +382,17 @@ public final class R {
         public static final int menu_server = 0x7f0b0002;
     }
     public static final class raw {
-        public static final int chimeconnect = 0x7f050000;
-        public static final int chimedisconnect = 0x7f050001;
-        public static final int color_fragment_shader = 0x7f050002;
-        public static final int cube_mesh_fragment_shader = 0x7f050003;
-        public static final int cube_mesh_vertex_shader = 0x7f050004;
-        public static final int errormessage = 0x7f050005;
-        public static final int nxtstartupsound = 0x7f050006;
-        public static final int simple_vertex_shader = 0x7f050007;
-        public static final int texture_fragment_shader = 0x7f050008;
-        public static final int texture_vertex_shader = 0x7f050009;
-        public static final int warningmessage = 0x7f05000a;
+        public static final int chimeconnect = 0x7f050001;
+        public static final int chimedisconnect = 0x7f050002;
+        public static final int color_fragment_shader = 0x7f050003;
+        public static final int cube_mesh_fragment_shader = 0x7f050004;
+        public static final int cube_mesh_vertex_shader = 0x7f050005;
+        public static final int errormessage = 0x7f050006;
+        public static final int nxtstartupsound = 0x7f050007;
+        public static final int simple_vertex_shader = 0x7f050008;
+        public static final int texture_fragment_shader = 0x7f050009;
+        public static final int texture_vertex_shader = 0x7f05000a;
+        public static final int warningmessage = 0x7f05000b;
     }
     public static final class string {
         public static final int VUFORIA_INIT_ERROR_DEVICE_NOT_SUPPORTED = 0x7f0a0000;

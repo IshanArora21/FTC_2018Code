@@ -1,6 +1,7 @@
 package org.firstinspires.ftc.teamcode.subsystems;
 
 import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 
 /**
@@ -48,9 +49,11 @@ public class DriveTrain {
         frontLeft = hwMap.get(DcMotor.class, "front_LeftWheel");
         frontRight = hwMap.get(DcMotor.class, "front_RightWheel");
 
+
         //back drive motors
         backLeft = hwMap.get(DcMotor.class, "back_LeftWheel");
         backRight = hwMap.get(DcMotor.class, "back_RightWheel");
+
 
     }
 
@@ -67,11 +70,11 @@ public class DriveTrain {
 
         //sets the power for the front motors
         frontLeft.setPower(motorOutputs[0][0]);
-        frontRight.setPower(motorOutputs[0][1]);
+        frontRight.setPower(-motorOutputs[0][1]);
 
         //sets the power for the back motors
         backLeft.setPower(motorOutputs[1][0]);
-        backRight.setPower(motorOutputs[1][1]);
+        backRight.setPower(-motorOutputs[1][1]);
     }
 
     /**
@@ -86,12 +89,11 @@ public class DriveTrain {
         possState = systemStates.DRIVE;
 
         //actual maths behind it
-        double r = Math.hypot(strafe, drive);
-        double robotAngle = Math.atan2(drive, strafe) - Math.PI / 4;
-        motorOutputs[0][0] = r * Math.cos(robotAngle) + turn; //front left
-        motorOutputs[0][1] = r * Math.sin(robotAngle) - turn; //front right
-        motorOutputs[1][0] = r * Math.sin(robotAngle) + turn; //back left
-        motorOutputs[1][1] = r * Math.cos(robotAngle) - turn; //back right
+
+        motorOutputs[0][0] =  strafe + drive + turn;//front left
+        motorOutputs[0][1] = -strafe + drive - turn; //front right
+        motorOutputs[1][0] = -strafe + drive + turn; //back left
+        motorOutputs[1][1] =  strafe + drive - turn; //back right
     }
 
     public void setStop() {
