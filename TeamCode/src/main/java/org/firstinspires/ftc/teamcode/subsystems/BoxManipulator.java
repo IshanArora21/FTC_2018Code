@@ -66,7 +66,8 @@ public class BoxManipulator {
     }
 
     /**
-     * Changes intake speed to input from game-pad
+     * changes intake speed to input from game-pad
+     * @param spd : speed of intake
      */
     public void setIntakeSpeed(double spd) {
         intakeSpeed = spd;
@@ -74,7 +75,8 @@ public class BoxManipulator {
     }
 
     /**
-     * Changes belt speed to input from game-pad
+     * changes belt speed to input from game-pad
+     * @param spd : speed of belt
      */
     public void setBeltSpeed(double spd) {
         beltSpeed = spd;

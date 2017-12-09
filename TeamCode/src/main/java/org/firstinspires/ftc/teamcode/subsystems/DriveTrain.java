@@ -85,7 +85,7 @@ public class DriveTrain {
         //enables motor control
         possState = systemStates.DRIVE;
 
-        motorOutputs[0][0] =  strafe + drive +turn;
+        motorOutputs[0][0] =  strafe + drive + turn;
         motorOutputs[0][1] = -strafe + drive - turn;
         motorOutputs[1][0] = -strafe + drive + turn;
         motorOutputs[1][1] =  strafe + drive - turn;
