@@ -34,7 +34,7 @@ public class Arm {
     private Servo armServo;
 
     public Arm(HardwareMap hwMap) {
-        //instantiating variables
+        //instantiating variables 
         colorSensor = new ColorSensor(); //figure out if this is right syntax
         armServo = new Servo(Servo.class, "armServo");
         colorSensor = hwMap.colorSensor.get("colorSensor"); //sees big bulbous balls
