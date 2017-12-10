@@ -1,6 +1,8 @@
 package org.firstinspires.ftc.teamcode.subsystems;
 
 import com.qualcomm.robotcore.hardware.HardwareMap;
+import com.qualcomm.robotcore.hardware.ColorSensor;
+import com.qualcomm.robotcore.hardware.Servo;
 
 /**
  * @version 1.0
@@ -16,8 +18,8 @@ public class Arm {
     public static Arm getNewArmInstance(HardwareMap hwMap) {
         if (arm == null) {
             arm = new Arm(hwMap);
-            return arm;
         }
+        return arm;
     }
 
     //possible states the system could be in
@@ -35,9 +37,10 @@ public class Arm {
 
     public Arm(HardwareMap hwMap) {
         //instantiating variables 
-        colorSensor = new ColorSensor(); //figure out if this is right syntax
-        armServo = new Servo(Servo.class, "armServo");
+        //colorSensor = new ColorSensor(); //figure out if this is right syntax
+        //armServo = new Servo(Servo.class, "armServo");
         colorSensor = hwMap.colorSensor.get("colorSensor"); //sees big bulbous balls
+        armServo = hwMap.servo.get("armServo");
 
         //system off means arm is off
         possState = systemStates.SYSTEM_OFF;
@@ -76,5 +79,10 @@ public class Arm {
     //Tests to see if the sensor sees red
     public boolean seesRed() {
         return colorSensor.red() > 100;
+    }
+
+    //Tests to see if the sensor sees blue
+    public boolean seesBlue() {
+        return colorSensor.blue() > 100;
     }
 }

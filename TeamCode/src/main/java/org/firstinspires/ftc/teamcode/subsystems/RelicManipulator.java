@@ -1,6 +1,8 @@
 package org.firstinspires.ftc.teamcode.subsystems;
 
 import com.qualcomm.robotcore.hardware.HardwareMap;
+import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.Servo;
 
 /**
  * @version 1.0
@@ -31,9 +33,12 @@ public class RelicManipulator {
 
     public RelicManipulator(HardwareMap hwMap) {
         //instantiate variables
-        slideMotor = new DcMotor(DcMotor.class, "slideMotor");
-        clawFingers = new Servo(Servo.class, "clawFingers");
-        clawWrist = new Servo(Servo.class, "clawWrist");
+        //slideMotor = new DcMotor(DcMotor.class, "slideMotor");
+        slideMotor = hwMap.get(DcMotor.class, "slide_Motor");
+        //clawFingers = new Servo(Servo.class, "clawFingers");
+        clawFingers = hwMap.get(Servo.class, "claw_Fingers");
+        //clawWrist = new Servo(Servo.class, "clawWrist");
+        clawWrist = hwMap.get(Servo.class, "claw_Wrist");
         possState = systemStates.SYSTEM_OFF;
     }
 
