@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/Connor_Hofenbitzer/.android/build-cache/621a90e400d351017156f3626412834a096220a8/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="1ce86a6340781abf3d876eba190efa34ae92d2f9">
+        <dex dex="/Users/Connor_Hofenbitzer/Documents/FTC Development/ftc_app-3.5/TeamCode/build/intermediates/pre-dexed/debug/classes_391cb81a55f6c5ad0013c62b74700be91b33fd6c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Connor_Hofenbitzer/.android/build-cache/7cd102f1b2d2d6ff6f156134af5692874ef97609/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="7558c70f3b0b473ca494059b37f16ca880ac43fd">
+        <dex dex="/Users/Connor_Hofenbitzer/Documents/FTC Development/ftc_app-3.5/TeamCode/build/intermediates/pre-dexed/debug/classes_5dcfe7ee52114cbd42257a6e363a422564a75bb5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Connor_Hofenbitzer/.android/build-cache/dedfe442b139bfc5479e56931cb8a4c0e49e60fe/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="6c6d1584a392ebfee01efd98e6caaf6a9e5ac51d">
+        <dex dex="/Users/Connor_Hofenbitzer/Documents/FTC Development/ftc_app-3.5/TeamCode/build/intermediates/pre-dexed/debug/classes_942f8e5faf73461887b5343ad80fd4af219fe65a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Connor_Hofenbitzer/.android/build-cache/acd2e6e1111657aab3025df251229e6ffb13da13/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="9dafed45e330aec14abcce05bdb7bbdb2a2d7092">
+        <dex dex="/Users/Connor_Hofenbitzer/Documents/FTC Development/ftc_app-3.5/TeamCode/build/intermediates/pre-dexed/debug/classes_04c72c43b86a61cd0753bfa380c8b84bacc20379.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Connor_Hofenbitzer/Documents/FTC Development/ftc_app-3.5/FtcRobotController/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="cf752996dda895ac98a49b1d9c06a405226fa023">
+        <dex dex="/Users/Connor_Hofenbitzer/Documents/FTC Development/ftc_app-3.5/TeamCode/build/intermediates/pre-dexed/debug/classes_3bb95b4acdf4baaba666ea3a8aa2f109685a5f25.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Connor_Hofenbitzer/.android/build-cache/e14d0bb1a45e55ecacbb24bb2e902e221c355b13/output/jars/libs/support-annotations-23.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="5a214d3b1b12e72f4fb0d5d5d8d0ec43c96de2b5">
+        <dex dex="/Users/Connor_Hofenbitzer/Documents/FTC Development/ftc_app-3.5/TeamCode/build/intermediates/pre-dexed/debug/support-annotations-23.4.0_0c005f646f8585f50aa5d48c9bef3c06b961d3b5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Connor_Hofenbitzer/.android/build-cache/e14d0bb1a45e55ecacbb24bb2e902e221c355b13/output/jars/libs/Vuforia.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="91b46366eb9f8203073ee2935087c097c888c0ed">
+        <dex dex="/Users/Connor_Hofenbitzer/Documents/FTC Development/ftc_app-3.5/TeamCode/build/intermediates/pre-dexed/debug/Vuforia_d7a464a12affd03fc16d0b1de0fdda0d43cc8ddc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Connor_Hofenbitzer/.android/build-cache/e14d0bb1a45e55ecacbb24bb2e902e221c355b13/output/jars/libs/gson-extras-0.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="b30c2655badcc7ce97f84e49f777b7dd154bad57">
+        <dex dex="/Users/Connor_Hofenbitzer/Documents/FTC Development/ftc_app-3.5/TeamCode/build/intermediates/pre-dexed/debug/gson-extras-0.2.1_6f5408765828e0c4f7b697d1fa9814ea81a015a0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Connor_Hofenbitzer/.android/build-cache/a94d839b0d600235afecc66088d49128ad1b3b3a/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="9403be210676ed196cdcc64c7391b9ae2361c174">
+        <dex dex="/Users/Connor_Hofenbitzer/Documents/FTC Development/ftc_app-3.5/TeamCode/build/intermediates/pre-dexed/debug/classes_56580cb31cf5aff52a2eed3014f25296cb925ed8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Connor_Hofenbitzer/.android/build-cache/e14d0bb1a45e55ecacbb24bb2e902e221c355b13/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="5d8f95b7b91c8a132c514f5dbe75340305e6883b">
+        <dex dex="/Users/Connor_Hofenbitzer/Documents/FTC Development/ftc_app-3.5/TeamCode/build/intermediates/pre-dexed/debug/classes_47abb68079805a9b12c0366500cafb31da36b5ed.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Connor_Hofenbitzer/.android/build-cache/1908728afdad24f1ae9b649ab2ba3563dfb4f6da/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="e444b561b0feba789cac93c5db61f08ef8c25ee6">
+        <dex dex="/Users/Connor_Hofenbitzer/Documents/FTC Development/ftc_app-3.5/TeamCode/build/intermediates/pre-dexed/debug/classes_3c768aba6b9a3a4279d7a61e33deffea71aedb4d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Connor_Hofenbitzer/.android/build-cache/e14d0bb1a45e55ecacbb24bb2e902e221c355b13/output/jars/libs/javac.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="c576121aac49e547b39aedfb1daa29782db4166c">
+        <dex dex="/Users/Connor_Hofenbitzer/Documents/FTC Development/ftc_app-3.5/TeamCode/build/intermediates/pre-dexed/debug/javac_ae62c7375027e86768ad524e586d98eebfbca0b3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Connor_Hofenbitzer/.android/build-cache/e14d0bb1a45e55ecacbb24bb2e902e221c355b13/output/jars/libs/gson-2.8.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="e118dd0900e4a18fb928ebb8df2d9fbda78f2b5d">
+        <dex dex="/Users/Connor_Hofenbitzer/Documents/FTC Development/ftc_app-3.5/TeamCode/build/intermediates/pre-dexed/debug/gson-2.8.0_02187430dad72d3e1d2e8718a30f8a26df8dc855.jar" />
+    </item>
+
+</items>

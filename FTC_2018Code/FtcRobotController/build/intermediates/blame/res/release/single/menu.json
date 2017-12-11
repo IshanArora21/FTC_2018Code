@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/Connor_Hofenbitzer/Documents/FTC Development/ftc_app-3.5/FtcRobotController/build/intermediates/res/merged/release/menu/ftc_robot_controller.xml",
+        "source": "/Users/Connor_Hofenbitzer/Documents/FTC Development/ftc_app-3.5/FtcRobotController/src/main/res/menu/ftc_robot_controller.xml"
+    },
+    {
+        "merged": "/Users/Connor_Hofenbitzer/Documents/FTC Development/ftc_app-3.5/FtcRobotController/build/intermediates/res/merged/release/menu/main_menu.xml",
+        "source": "/Users/Connor_Hofenbitzer/.android/build-cache/1908728afdad24f1ae9b649ab2ba3563dfb4f6da/output/res/menu/main_menu.xml"
+    },
+    {
+        "merged": "/Users/Connor_Hofenbitzer/Documents/FTC Development/ftc_app-3.5/FtcRobotController/build/intermediates/res/merged/release/menu/menu_server.xml",
+        "source": "/Users/Connor_Hofenbitzer/.android/build-cache/621a90e400d351017156f3626412834a096220a8/output/res/menu/menu_server.xml"
+    }
+]

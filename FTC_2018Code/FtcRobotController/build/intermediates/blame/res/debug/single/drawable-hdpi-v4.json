@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/Connor_Hofenbitzer/Documents/FTC Development/ftc_app-3.5/FtcRobotController/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_launcher.png",
+        "source": "/Users/Connor_Hofenbitzer/Documents/FTC Development/ftc_app-3.5/FtcRobotController/src/main/res/drawable-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/Connor_Hofenbitzer/Documents/FTC Development/ftc_app-3.5/FtcRobotController/build/intermediates/res/merged/debug/drawable-hdpi-v4/button_shape.xml",
+        "source": "/Users/Connor_Hofenbitzer/.android/build-cache/7cd102f1b2d2d6ff6f156134af5692874ef97609/output/res/drawable-hdpi-v4/button_shape.xml"
+    }
+]
