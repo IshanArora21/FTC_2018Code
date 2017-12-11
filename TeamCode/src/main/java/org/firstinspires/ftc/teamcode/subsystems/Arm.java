@@ -11,9 +11,7 @@ import com.qualcomm.robotcore.hardware.Servo;
  */
 public class Arm {
 
-     /**
-     * singleton
-     */
+     //singleton
     private static Arm arm = null;
     //private ColorSensor colorSensor =null;
 
@@ -24,37 +22,25 @@ public class Arm {
         return arm;
     }
 
-     /**
-     * possible states the system could be in
-     */
+    //possible states the system could be in
     private systemStates possState;
     private enum systemStates {
         SYSTEM_OFF, ARM_EXTENDED, ARM_RETRACTED, COLOR_SENSE
     };
 
-
-     /**
-     * color sensor
-     */
+    //color sensor
     private ColorSensor colorSensor;
 
-     /**
-     * servo motor
-     */
+    //servo motor
     private Servo armServo;
 
     public Arm(HardwareMap hwMap) {
-         /**
-         * instantiating variables
-        */
-        //colorSensor = new ColorSensor(); //figure out if this is right syntax
-        //armServo = new Servo(Servo.class, "armServo");
+
+        //instantiating variables
         colorSensor = hwMap.colorSensor.get("colorSensor"); //sees big bulbous balls
         armServo = hwMap.servo.get("armServo");
 
-        /**
-         * system off means arm is off
-        */
+        //system off means arm is off
         possState = systemStates.SYSTEM_OFF;
     }
 
