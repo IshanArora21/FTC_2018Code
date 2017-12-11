@@ -40,18 +40,18 @@ public class AutoBlueLeft extends LinearOpMode {
         if(arm.seesRed()) { //turn right/left accordingly
             driveTrain.updateDrive(0,0,0.5);
             driveTrain.update();
-            sleep(10);
+            sleep(150);
             driveTrain.updateDrive(0,0,-0.5);
             driveTrain.update();
-            sleep(10);
+            sleep(150);
             driveTrain.setStop();
         } else {
             driveTrain.updateDrive(0,0,-0.5);
             driveTrain.update();
-            sleep(10);
+            sleep(150);
             driveTrain.updateDrive(0,0,0.5);
             driveTrain.update();
-            sleep(10);
+            sleep(150);
             driveTrain.setStop();
         }
         arm.setArmRetracted();
