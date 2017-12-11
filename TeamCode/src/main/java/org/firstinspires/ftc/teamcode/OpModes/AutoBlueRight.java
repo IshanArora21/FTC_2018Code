@@ -2,7 +2,6 @@ package org.firstinspires.ftc.teamcode.OpModes;
 
     import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
     import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
-    import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
     import org.firstinspires.ftc.teamcode.subsystems.BoxManipulator;
     import org.firstinspires.ftc.teamcode.subsystems.DriveTrain;
@@ -63,7 +62,7 @@ public class AutoBlueRight extends LinearOpMode {
         driveTrain.updateDrive(0,0,1); //turn towards safe zone (right)
         driveTrain.update();
         sleep(1000);
-        driveTrain.updateDrive(0,1,0);
+        driveTrain.updateDrive(0,1,0); //drive for five seconds
         driveTrain.update();
         sleep(5000); //forward until in zone (sleep for 5k milliseconds?)
     }
