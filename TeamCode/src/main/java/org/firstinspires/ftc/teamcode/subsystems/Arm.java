@@ -11,7 +11,9 @@ import com.qualcomm.robotcore.hardware.Servo;
  */
 public class Arm {
 
-    //singleton
+     /**
+     * singleton
+     */
     private static Arm arm = null;
     //private ColorSensor colorSensor =null;
 
@@ -22,30 +24,43 @@ public class Arm {
         return arm;
     }
 
-    //possible states the system could be in
+     /**
+     * possible states the system could be in
+     */
     private systemStates possState;
     private enum systemStates {
         SYSTEM_OFF, ARM_EXTENDED, ARM_RETRACTED, COLOR_SENSE
     };
 
 
-    //color sensor
+     /**
+     * color sensor
+     */
     private ColorSensor colorSensor;
 
-    //servo motor
+     /**
+     * servo motor
+     */
     private Servo armServo;
 
     public Arm(HardwareMap hwMap) {
-        //instantiating variables 
+         /**
+         * instantiating variables
+        */
         //colorSensor = new ColorSensor(); //figure out if this is right syntax
         //armServo = new Servo(Servo.class, "armServo");
         colorSensor = hwMap.colorSensor.get("colorSensor"); //sees big bulbous balls
         armServo = hwMap.servo.get("armServo");
 
-        //system off means arm is off
+        /**
+         * system off means arm is off
+        */
         possState = systemStates.SYSTEM_OFF;
     }
 
+    /**
+     * updates the system
+     */
     public void update() {
         switch (possState) {
             case SYSTEM_OFF:
@@ -61,27 +76,37 @@ public class Arm {
         }
     }
 
-    //Stops the servo motor
+    /**
+     * Shuts down the entire system
+     */
     public void setStop() {
         possState = systemStates.SYSTEM_OFF;
     }
 
-     //Sets the arm angle to 90 degrees (downwards)
+     /**
+     * Sets the arm angle to 90 degrees (downward)
+     */
     public void setArmExtended() {
         possState = systemStates.ARM_EXTENDED;
     }
 
-    //Pulls the arm back into the constraining box
+    /**
+     * Pulls the arm back into the constraining box
+     */
     public void setArmRetracted() {
         possState = systemStates.ARM_RETRACTED;
     }
 
-    //Tests to see if the sensor sees red
+    /**
+     * Tests to see if the sensor sees red
+     */
     public boolean seesRed() {
         return colorSensor.red() > 100;
     }
 
-    //Tests to see if the sensor sees blue
+    /**
+    * Tests to see if the sensor sees blue
+    */
     public boolean seesBlue() {
         return colorSensor.blue() > 100;
     }
