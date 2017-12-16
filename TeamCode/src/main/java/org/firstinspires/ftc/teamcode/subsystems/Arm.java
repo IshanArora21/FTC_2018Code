@@ -13,7 +13,6 @@ public class Arm {
 
      //singleton
     private static Arm arm = null;
-    //private ColorSensor colorSensor =null;
 
     public static Arm getNewArmInstance(HardwareMap hwMap) {
         if (arm == null) {
