@@ -35,7 +35,6 @@ public class AutoBlueLeft extends LinearOpMode {
         arm.setStop();
 
         arm.setArmExtended();
-        arm.setArmExtended();
         arm.update();
         if(arm.seesRed()) { //turn right/left accordingly
             driveTrain.updateDrive(0,0,0.5);

@@ -2,6 +2,7 @@ package org.firstinspires.ftc.teamcode.subsystems;
 
 import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.Servo;
 
 /**
  * @version 1.1
@@ -23,23 +24,26 @@ public class BoxManipulator {
     //intake motors
     private DcMotor leftIntake;
     private DcMotor rightIntake;
+    private Servo rotationalServo;
 
-    //belt motors
-    private DcMotor topBelt;
-    private DcMotor bottomBelt;
+//    //belt motors
+//    private DcMotor topBelt;
+//    private DcMotor bottomBelt;
 
     public double intakeSpeed;
     public double beltSpeed;
+    public double rotationalPos;
 
     public BoxManipulator(HardwareMap hwMap) {
 
         //intake motors
         leftIntake = hwMap.get(DcMotor.class, "left_Intake");
         rightIntake = hwMap.get(DcMotor.class, "right_Intake");
-
-        //belt motors
-        topBelt = hwMap.get(DcMotor.class, "top_Belt");
-        bottomBelt = hwMap.get(DcMotor.class, "bottom_Belt");
+        rotationalServo = hwMap.get(Servo.class, "rotational_Servo");
+//
+//        //belt motors
+//        topBelt = hwMap.get(DcMotor.class, "top_Belt");
+//        bottomBelt = hwMap.get(DcMotor.class, "bottom_Belt");
     }
 
     /**
@@ -50,10 +54,11 @@ public class BoxManipulator {
         //sets the power for the front motors
         leftIntake.setPower(intakeSpeed);
         rightIntake.setPower(intakeSpeed);
+        rotationalServo.setPosition(rotationalPos);
 
-        //sets the power for the back motors
-        topBelt.setPower(beltSpeed);
-        bottomBelt.setPower(beltSpeed);
+//        //sets the power for the back motors
+//        topBelt.setPower(beltSpeed);
+//        bottomBelt.setPower(beltSpeed);
     }
 
     /**
@@ -80,6 +85,15 @@ public class BoxManipulator {
      */
     public void setBeltSpeed(double spd) {
         beltSpeed = spd;
+        update();
+    }
+
+    /**
+     * change position to input from game-pad
+     * @param pos : position of rotational servo
+     */
+    public void setRotationalPos(double pos) {
+        rotationalPos = pos;
         update();
     }
 }

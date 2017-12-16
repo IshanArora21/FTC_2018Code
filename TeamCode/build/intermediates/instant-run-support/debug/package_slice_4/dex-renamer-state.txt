@@ -1,0 +1,4 @@
+#Tue Dec 12 16:47:45 EST 2017
+base.0=C\:\\Users\\Chinmay\\Documents\\GitHub\\FTC_2018Code\\TeamCode\\build\\intermediates\\transforms\\dexMerger\\debug\\4
+path.0=classes.dex
+renamed.0=classes.dex

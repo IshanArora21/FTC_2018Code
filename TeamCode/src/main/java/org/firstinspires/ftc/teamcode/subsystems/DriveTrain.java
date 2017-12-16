@@ -22,6 +22,10 @@ public class DriveTrain {
     //outputs
     private double[][] motorOutputs;
 
+    private boolean isDone;
+    private double forwardSetpoint;
+    private double strafeSetpoint;
+
     //front motors
     private DcMotor frontLeft;
     private DcMotor frontRight;
@@ -33,7 +37,7 @@ public class DriveTrain {
     //possible states the drive train could be in
     private systemStates possState;
     private enum systemStates  {
-        SYSTEM_OFF , DRIVE
+        SYSTEM_OFF , DRIVE, AUTO
     };
 
     public DriveTrain(HardwareMap hwMap) {
@@ -42,7 +46,10 @@ public class DriveTrain {
         possState = systemStates.SYSTEM_OFF;
 
         //drive motor outputs
+        isDone = false;
         motorOutputs = new double[2][2];
+        forwardSetpoint = 0;
+        strafeSetpoint = 0;
 
         //front drive motors
         frontLeft = hwMap.get(DcMotor.class, "front_LeftWheel");
@@ -57,21 +64,49 @@ public class DriveTrain {
     public void update() {
         switch (possState) {
             case SYSTEM_OFF:
-                updateDrive(0,0,0);
+                frontLeft.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+                frontRight.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+                backLeft.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+                backRight.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+                isDone = false;
+                updateInnerDrive(0,0,0);
                 break;
             case DRIVE:
+                break;
+            case AUTO:
+                frontLeft.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+                frontRight.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+                backLeft.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+                backRight.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+
+                double scale = (1.0/360.0 * (8.89 * 3.14159));
+                if(strafeSetpoint != 0) {
+                    frontLeft.setTargetPosition((int) (strafeSetpoint*scale) );
+                    frontRight.setTargetPosition((int) (strafeSetpoint*scale));
+                    backLeft.setTargetPosition((int) -(strafeSetpoint*scale));
+                    backRight.setTargetPosition((int) (strafeSetpoint*scale));
+
+                } else {
+                    frontLeft.setTargetPosition((int)   (forwardSetpoint*scale) );
+                    frontRight.setTargetPosition((int) -(forwardSetpoint*scale));
+                    backLeft.setTargetPosition((int)    (forwardSetpoint*scale));
+                    backRight.setTargetPosition((int)  -(forwardSetpoint*scale));
+                }
+                isDone = !frontLeft.isBusy();
                 break;
             default:
                 System.out.println("Yo, you messed up enumeration within drivetrain dude");
         }
 
-        //sets the power for the front motors
-        frontLeft.setPower(motorOutputs[0][0]);
-        frontRight.setPower(-motorOutputs[0][1]);
+        if(possState != systemStates.AUTO) {
+            //sets the power for the front motors
+            frontLeft.setPower(motorOutputs[0][0]);
+            frontRight.setPower(-motorOutputs[0][1]);
 
-        //sets the power for the back motors
-        backLeft.setPower(motorOutputs[1][0]);
-        backRight.setPower(-motorOutputs[1][1]);
+            //sets the power for the back motors
+            backLeft.setPower(motorOutputs[1][0]);
+            backRight.setPower(-motorOutputs[1][1]);
+        }
     }
 
     /**
@@ -80,6 +115,16 @@ public class DriveTrain {
      * @param drive  : robots forwards and backwards movement
      * @param turn   : rotational value
      */
+    public void updateInnerDrive(double strafe, double drive , double turn) {
+
+        //enables motor control
+
+        motorOutputs[0][0] =  strafe + drive + turn;
+        motorOutputs[0][1] = -strafe + drive - turn;
+        motorOutputs[1][0] = -strafe + drive + turn;
+        motorOutputs[1][1] =  strafe + drive - turn;
+    }
+
     public void updateDrive(double strafe, double drive , double turn) {
 
         //enables motor control
@@ -91,8 +136,31 @@ public class DriveTrain {
         motorOutputs[1][1] =  strafe + drive - turn;
     }
 
+    public boolean isDone() {
+        return isDone;
+    }
     public void setStop() {
         possState = systemStates.SYSTEM_OFF;
         this.update();
     }
+
+    /**
+     *
+     * @param forwards : CM
+     */
+    public void setAutoForwards(double forwards) {
+        this.strafeSetpoint = 0;
+        this.forwardSetpoint = forwards;
+    }
+
+    /**
+     *
+     * @param strafe : CM
+     */
+    public void setAutoStrafe(double strafe) {
+        this.forwardSetpoint = 0;
+        this.strafeSetpoint = strafe;
+    }
+
+
 }

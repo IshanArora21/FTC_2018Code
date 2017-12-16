@@ -35,9 +35,10 @@ public class ExampleAuto extends LinearOpMode {
         boxManipulator.setStop();
         relicManipulator.setStop();
 
-        driveTrain.updateDrive(1 , 0 ,0);
-        driveTrain.update();
-        sleep(1000);
+        driveTrain.setAutoStrafe(100);
+        while (!driveTrain.isDone()) {
+            driveTrain.update();
+        }
         driveTrain.setStop();
     }
 

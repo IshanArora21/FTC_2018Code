@@ -52,7 +52,7 @@ public class Arm {
             case SYSTEM_OFF:
                 break;
             case ARM_EXTENDED:
-                armServo.setPosition(1);
+                armServo.setPosition(0);
                 break;
             case ARM_RETRACTED:
                 armServo.setPosition(0.5);
